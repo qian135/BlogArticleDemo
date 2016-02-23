@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--校园这个大类的布局代码，如果先不把这个布局实例化，后面的校园活动子布局
+都不用想了-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        为了和滑动条左右两边留10dp协调-->
+
+    <LinearLayout
+        android:id="@+id/campus_home_page_text_view_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/campus_activity_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="校园活动"
+            android:textColor="@color/blue"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/campus_competition_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="校园竞赛"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/campus_team_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="校园团队"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_line" />
+
+        <!--滑动条初始位置距离左边界10dp-->
+        <ImageView
+            android:id="@+id/campus_home_page_slide_bar"
+            android:layout_width="1dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/blue"
+            android:scaleType="matrix" />
+
+    </RelativeLayout>
+
+
+    <!--校园这个大类的主ViewPager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/campus_home_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+</LinearLayout>
