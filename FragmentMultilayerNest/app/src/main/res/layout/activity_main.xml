@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- 放在MainActivity上的第一层ViewPager -->
+    <com.whereru.fragmentmultilayernest.CustomLayerOneViewPager
+        android:id="@+id/layer_one_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/layer_one_fragment_one_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LayerOneFragmentOne"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/layer_one_fragment_two_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LayerOneFragmentTwo"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/layer_one_fragment_three_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LayerOneFragmentThree"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>
